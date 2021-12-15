@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import Link from  "next/link"
+import Head from "next/head";
 
 const  Pesquisa = () => {
     const [ form, setForm ] = useState({
         Nome: '',
         Email: '',
         WhaltSapp:'',
+        Nota: 0
     })
+    const notas = [0,1,2,3,4,5]
     const [sucess, setSuccess] = useState(false)
     const [ retorno, setRetorno] = useState({})
-    const save = async () => {
+    const save = async () => {       
        try{
         const response = await fetch('/api/save', {
             method: 'POST',
@@ -29,9 +31,8 @@ const onChage = evt => {
         [key]: value
     }))
 }
-    return (
-        <div className='pt-6'>
-
+return (
+        <div className='pt-6'>           
             <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
             <p className='text-center mb-6'>
                 O restaurante cheiro Bahiano sempre busca por atender melhor seus clientes.<br />
@@ -43,16 +44,40 @@ const onChage = evt => {
                <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="Nome" onChage={onChage} name = 'Nome' value={form.Nome}/>
                <label className='font-bold'>Seu Email: </label>
                <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="Email" onChage={onChage} name = 'Email' value={form.Email}/>
-               <label className='font-bold'>Seu WhatlSapp: </label>
+               <label className='font-bold'>Seu WhaltSapp: </label>
                <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="WhaltSapp" onChage={onChage} name = 'WhaltSapp' value={form.WhaltSapp}/>
+               <label className='font-bold'>Nota:</label>
+
+               <div className="flex py-6">
+               {notas.map(nota =>{
+                   return (
+                   <label className="block w-1/6 text-center">
+                       {nota} <br />
+                         <input type='radio' name='Nota' value={nota} onChage={onChage} />
+                        </label>)
+               })}
+               </div> 
+               <pageTitle title='pesquisa' />            
                <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button> 
               
         </div> }
         {sucess && <div className='w-1/5 mx-auto'> 
-            <p className="">Obrigado por contribuir com sua sugestão ou crítica</p>  
-        cupom: {JSON.stringify(retorno)}</div>}
-
-      </div>  
+            <p className=" md-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3">Obrigado por contribuir com sua sugestão ou crítica</p>
+            {
+                retorno.showCoupon && <div className="text-center border p-4 mb-4">
+                    Seu cupom: <br />
+                    <span className="font-bold text-2x1"  >{retorno.cupom}</span>
+                    </div>
+            }  
+             {
+                retorno.showCoupon && <div className="text-center border p-4 mb-4">
+                    <span className="font-bold block mb-2">{retorno.promo}</span>
+                    <br />
+                    <span className="italic">Tire um print ou foto desta tela e apresente ao garçon.</span>
+                    </div>
+             }  
+      </div>} 
+    </div> 
     )
 }
 export default Pesquisa

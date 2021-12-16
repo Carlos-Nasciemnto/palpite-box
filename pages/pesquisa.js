@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Head from "next/head";
+import PageTitle from '../components/PageTitle'
 
 const  Pesquisa = () => {
     const [ form, setForm ] = useState({
@@ -8,7 +8,7 @@ const  Pesquisa = () => {
         WhaltSapp:'',
         Nota: 0
     })
-    const notas = [0,1,2,3,4,5]
+    const notas = [0, 1, 2, 3, 4, 5]
     const [sucess, setSuccess] = useState(false)
     const [ retorno, setRetorno] = useState({})
     const save = async () => {       
@@ -32,7 +32,8 @@ const onChage = evt => {
     }))
 }
 return (
-        <div className='pt-6'>           
+        <div className='pt-6'>
+            <PageTitle title='Pesquisa' />           
             <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
             <p className='text-center mb-6'>
                 O restaurante cheiro Bahiano sempre busca por atender melhor seus clientes.<br />

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import pageTitle from "../components/pageTitle";
+import PageTitle from "../components/PageTitle";
 
 
 
@@ -8,7 +8,7 @@ const Sobre = () => {
     
     return (
         <div>
-            <pageTitle title='Sobre' /> 
+            <PageTitle title='Sobre' /> 
             <h1>Sobre</h1>
         <div>
             <Link href='/'>

@@ -1,12 +1,12 @@
 import React from "react";
 import  Link from "next/link"
-import pageTitle from "../components/pageTitle";
+import PageTitle from "../components/PageTitle";
 
 const Contato = () => {
 
     return  (
          <div>
-             <pageTitle title='Contato' /> 
+             <PageTitle title='contato' /> 
             <h1>Contato</h1>
         <div>
             <Link href='/'>

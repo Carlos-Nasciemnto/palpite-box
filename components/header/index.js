@@ -17,11 +17,11 @@ const Header = ( ) => {
                     <a className='px-2 hover:underline'>Sobre</a> 
                 </Link>
 
-            <Link href='/Contato'>
+            <Link href='/contato'>
                 <a className='px-2 hover:underline'>Contato</a>
             </Link>
 
-            <Link href='/Pesquisa'>
+            <Link href='/pesquisa'>
                 <a className='px-2 hover:underline'>Pesquisa</a>
             </Link>
          </div>

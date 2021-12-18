@@ -23,7 +23,7 @@ const  Pesquisa = () => {
      }catch (err){
   } 
 }
-const onChage = evt => {
+const onChange = evt => {
     const value = evt.target.value
     const key = evt.target.name
     setForm(old => ({
@@ -42,11 +42,11 @@ return (
             
             {!sucess &&  <div className='w-1/5 mx-auto'>
                <label className='font-bold'>Seu Nome: </label>
-               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="Nome" onChage={onChage} name = 'Nome' value={form.Nome}/>
-               <label className='font-bold'>Seu Email: </label>
-               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="Email" onChage={onChage} name = 'Email' value={form.Email}/>
-               <label className='font-bold'>Seu WhaltSapp: </label>
-               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="WhaltSapp" onChage={onChage} name = 'WhaltSapp' value={form.WhaltSapp}/>
+               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="Nome" onChange={onChange} name = 'Nome' value={form.Nome}/>
+               <label className='font-bold'>Email: </label>
+               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="Email" onChange={onChange} name = 'Email' value={form.Email}/>
+               <label className='font-bold'>WhaltSapp: </label>
+               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rouder' placeholder="WhaltSapp" onChange={onChange} name = 'WhaltSapp' value={form.WhaltSapp}/>
                <label className='font-bold'>Nota:</label>
 
                <div className="flex py-6">
@@ -54,11 +54,11 @@ return (
                    return (
                    <label className="block w-1/6 text-center">
                        {nota} <br />
-                         <input type='radio' name='Nota' value={nota} onChage={onChage} />
+                         <input type='radio' name='Nota' value={nota} onChange={onChange} />
                         </label>)
                })}
                </div> 
-               <pageTitle title='pesquisa' />            
+               <pageTitle title='Pesquisa' />            
                <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button> 
               
         </div> }

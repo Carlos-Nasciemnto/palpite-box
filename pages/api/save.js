@@ -5,8 +5,8 @@ import moment from 'moment'
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID)
 
 const genCupom = () => {
-  const code = parseInt(moment().format('YYMMDDHHmmssSSS').toString(16).toUpperCase())
-  return code.substr(0,4) + '-' + code.substr(4,4) + '-' + code.substr(8,4)
+  const code = parseInt(moment().format('YYMMDDHHmmssSSS')).toString(16).toUpperCase()
+  return code.substr(0, 4) + '-' + code.substr(4, 4) + '-' + code.substr(8, 4)
 
 }
 export default async (req, res) => {
@@ -23,15 +23,14 @@ export default async (req, res) => {
         await sheetConfig.loadCells('A2:B2')
       
         const mostrarPromocaoCell = sheetConfig.getCell(1, 0)
-        const textoCell = sheetConfig.getCell(1, 1)
+        const textoCell = sheetConfig.getCell(1, 1) 
 
         let Cupom = ''
         let Promo = ''
         if(mostrarPromocaoCell.value === 'VERDADEIRO'){
           Cupom = genCupom()
           Promo = textoCell.value
-        }
-        
+        }        
         //Nome	Email	WhaltSapp	Cupom	Promo
             await sheet.addRow({
                 Nome: data.Nome,

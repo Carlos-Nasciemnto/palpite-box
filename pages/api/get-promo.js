@@ -12,7 +12,7 @@ export default async(req, res) => {
         }) 
         await doc.loadInfo()       
         
-        const sheet = doc.sheetsByIndex[1]
+        const sheet = doc.sheetsByIndex[2]
         await sheet.loadCells('A2:B2')      
        
         const mostrarPromocaoCell = sheet.getCell(1, 0)

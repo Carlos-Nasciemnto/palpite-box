@@ -9,8 +9,8 @@ const  Pesquisa = () => {
         Nota: 0
     })
     const notas = [0, 1, 2, 3, 4, 5]
-    const [sucess, setSuccess] = useState(false)
-    const [ retorno, setRetorno] = useState({})
+    const [ sucess, setSuccess ] = useState(false)
+    const [ retorno, setRetorno ] = useState({})
     const save = async () => {       
        try{
         const response = await fetch('/api/save', {
@@ -55,24 +55,26 @@ return (
                    <label className="block w-1/6 text-center">
                        {nota} <br />
                          <input type='radio' name='Nota' value={nota} onChange={onChange} />
-                        </label>)
-               })}
+                        </label>
+                    )
+                 })
+               }
                </div> 
                <pageTitle title='Pesquisa' />            
-               <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button> 
-              
+               <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>               
         </div> }
+        
         {sucess && <div className='w-1/5 mx-auto'> 
-            <p className=" md-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3">Obrigado por contribuir com sua sugestão ou crítica</p>
+            <p className=" mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3">Obrigado por contribuir com sua sugestão ou crítica</p>
             {
-                retorno.showCoupon && <div className="text-center border p-4 mb-4">
+                retorno.showCoupon && <div className="text-center border p-5 mb-4">
                     Seu cupom: <br />
-                    <span className="font-bold text-2x1"  >{retorno.cupom}</span>
+                    <span className="font-bold text-2x1">{retorno.Cupom}</span>
                     </div>
             }  
              {
                 retorno.showCoupon && <div className="text-center border p-4 mb-4">
-                    <span className="font-bold block mb-2">{retorno.promo}</span>
+                    <span className="font-bold block mb-2">{retorno.Promo}</span>
                     <br />
                     <span className="italic">Tire um print ou foto desta tela e apresente ao garçon.</span>
                     </div>

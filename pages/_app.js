@@ -1,17 +1,14 @@
-import React from 'react';
-import '../css/styles.css';
-import PageTitle from "../components/pageTitle"
+import React from 'react'
+import '../css/styles.css'
+import Layout from '../components/layout'
 
 
 
-const MyApp = ({Components, pageProps}) => {
-
-    return(
-        <layout>
-           <Components {...pageProps} />
-        </layout>
-    )
-}
-
-
+const MyApp = ({ Component, pageProps }) => {    
+    return(        
+        <Layout>
+           <Component {...pageProps} />
+        </Layout>
+     )
+}   
 export default MyApp

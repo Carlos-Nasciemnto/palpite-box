@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CSS/styles.css'
+import '../css/styles.css'
 import Layout from '../components/layout'
 
 

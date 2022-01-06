@@ -26,7 +26,7 @@ export default async (req, res) => {
         const mostrarPromocaoCell = sheetConfig.getCell(1, 0)
         const textoCell = sheetConfig.getCell(1, 1) 
 
-        let Cupom = ''
+        let Cupom = '' 
         let Promo = ''
         if(mostrarPromocaoCell.value === 'VERDADEIRO'){
           Cupom = genCupom()

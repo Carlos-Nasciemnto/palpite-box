@@ -31,7 +31,7 @@ Este projeto pode ser colocado em produção usando o Vercel (Sem nenhuma config
 
 ## Autor:
 
-**Carlos Nascimento** (https://www.linkedin.com/in/carlos-nascimento-2920a2206/)
+**Carlos Nascimento** (https://www.linkedin.com/in/carlosnascimento/)
 
 ## Licença:
 

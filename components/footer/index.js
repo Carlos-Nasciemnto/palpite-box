@@ -6,7 +6,7 @@ const Footer = () =>{
             <div className='container mx-auto text-center font-bold text-white'>
             Projeto desenvolvido por:
             Antonio Carlos/  {''}
-             <a className='hover:underline' href= 'www.linkedin.com/in/antonio-carlos-2920a2206'>Linkdin</a>/ {''}
+             <a className='hover:underline' href= 'www.linkedin.com/in/antoniocarlos'>Linkdin</a>/ {''}
              <a className='hover:underline' href='github.com/carlos-nasciemnto'>Github</a>
             <div className='mt-2'>
                      <img className='inline p-4' src='/logo_semana_fsm.png'></img>

@@ -50,7 +50,7 @@ export default async (req, res) => {
          }catch(err){
         console.log(err)
         res.end('error')
-        }
+        } 
 }
 
    

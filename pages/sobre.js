@@ -8,7 +8,7 @@ const Sobre = () => {
     
     return (
         <div>
-            <PageTitle title='Sobre' /> 
+            <pageTitle title='Sobre' /> 
             <h1>Sobre</h1>
         <div>
             <Link href='/'>

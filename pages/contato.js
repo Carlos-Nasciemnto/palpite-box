@@ -7,7 +7,7 @@ const Contato = () => {
 
     return  (
          <div>
-             <PageTitle title='Contato' /> 
+             <pageTitle title='Contato' /> 
             <h1>Contato</h1>
         <div>
             <Link href='/'>

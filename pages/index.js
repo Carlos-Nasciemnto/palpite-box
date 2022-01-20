@@ -10,7 +10,7 @@ const Index = () => {
    
     return (       
     <div className='mt-12 text-center '> 
-     <PageTitle title='seja bem-vindo' /> 
+     <pageTitle title='seja bem-vindo' /> 
         <p>
             O restaurante Cheiro Bahiano sempre busca por atender melhor seus clientes.<br/>
             Por isso, estamos sempre abertos a ouvir a sua opinião.
